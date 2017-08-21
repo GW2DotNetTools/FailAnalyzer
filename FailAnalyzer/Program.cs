@@ -114,7 +114,7 @@ namespace FailAnalyzer
             {
                 if (skipLines && skipLinesCount != 0)
                 {
-                    if (item.Contains("<li class=\"active\"><a data-toggle=\"tab\" href="))
+                    if (item.Contains("<li class=\"active\"><a data-toggle=\"tab\" href=") && item.Contains("#mf"))
                     {
                         var b = item.Substring(item.IndexOf("#mf"));
                         failedId = b.Remove(b.IndexOf("\""));
